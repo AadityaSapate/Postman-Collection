@@ -1,0 +1,1821 @@
+{
+	"info": {
+		"_postman_id": "02585b9d-f68b-4b00-ba6f-92ab90f945e3",
+		"name": " Links Backend V2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ADMIN",
+			"item": [
+				{
+					"name": "ADMIN LOGIN",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "AdminBearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZGlzYXBzOEBnbWFpbC5jb20iLCJleHAiOjE1Njc2MDA5NzB9.eck3ilwI7Nu-gyJiQi2LZN6IujFZuJIslFUpu_hvI0VcCx5AKOOvT6KVvnxDfsdHCsUQsVUnu8-sk6zaFZhSBw"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/email/29",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"email",
+								"29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL ADMINS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/admin/all?page=0&size=3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"all"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ADMIN BY ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/admin/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE NEW ADMIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Karanjot Singh Bawa\",\n    \"email\": \"tech@tsf.sgz\",\n    \"password\": \"abc789\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/admin",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE ADMIN BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Karanjot Singh\",\n    \"email\": \"karanjotsinghbawa@gmail.com\",\n    \"password\": \"abc7899\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ADMIN BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL CERTIFICATE JOBS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZGlzYXBzOEBnbWFpbC5jb20iLCJleHAiOjE1NjYxMzAwNzN9.bg-_fZyioUKOeyDw0OhGG-c9DLzxawvrjZ6uJT0VznB-55BjS7rxzMiXMxd_upPIBGDPtNXZ7YgurT4w8s5eDQ"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/certificate/jobs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL EMAIL JOBS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZGlzYXBzOEBnbWFpbC5jb20iLCJleHAiOjE1Njc2MDA5NzB9.eck3ilwI7Nu-gyJiQi2LZN6IujFZuJIslFUpu_hvI0VcCx5AKOOvT6KVvnxDfsdHCsUQsVUnu8-sk6zaFZhSBw"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/email/jobs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"email",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET USEREMAIL BY JOBID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZGlzYXBzOEBnbWFpbC5jb20iLCJleHAiOjE1Njc2MDA5NzB9.eck3ilwI7Nu-gyJiQi2LZN6IujFZuJIslFUpu_hvI0VcCx5AKOOvT6KVvnxDfsdHCsUQsVUnu8-sk6zaFZhSBw"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/email/29",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"email",
+								"29"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CERTIFICATE GENERATION",
+			"item": [
+				{
+					"name": "CERTIFICATE GENERATION FOR COC GRIP ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "AdminBearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZGlzYXBzOEBnbWFpbC5jb20iLCJleHAiOjE1NjU2OTcyMjN9.RcKS6z17ywaZ0E2p6RKzE6S5MfzvkGbK_Z_NoykkqWwqn3Qulb05DfZa5slKUhNDnPjnqSpUTl6dU0TZHcTD6w"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"users\":[\n    1\n    ],\n    \"details\":{\n    \"start_date\": \"06/02/2019\",\n    \"end_date\":\"07/02/2019\",\n    \"date_of_generation\":\"07/02/2019\"\n    \n}\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/certificate/generate?type=COC",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"generate"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "COC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CERTIFICATE GENERATION FOR COA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"users\":[\n\t\t1,3\n\t\t],\n\t\t\"details\":{\n\t\t    \"workshop_date\": \"06/02/2019\",\n    \"role\":\"Student\",\n    \"workshop_name\":\"Some WorksHop\"\n\n}\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/certificate/generate?type=COA",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"generate"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "COA"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CERTIFICATE GENERATION FOR LOR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n\t\"users\":[\n\t\t1,3\n\t\t],\n\t\t\"details\":{\n    \"start_date\": \"06/02/2019\",\n    \"end_date\":\"07/02/2019\",\n\t\"position\":\"aise\"\n}\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/certificate/generate?type=Recommendation",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"generate"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "Recommendation"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CERTIFICATE GENERATION FOR SF COC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"users\":[\n\t\t1\n\t\t],\n\t\t\"details\":{\n    \"date_of_generation\":\"07/02/2019\"\n}\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/certificate/generate?type=SFCOC",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"generate"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "SFCOC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CERTIFICATE GENERATION FOR COC MLF ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"users\":[\n\t\t1,3\n\t\t],\n\t\t\"details\":{\n    \"date_of_generation\":\"07/02/2019\"\n}\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/certificate/generate?type=MLF",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"generate"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "MLF"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CERTIFICATE GENERATION FOR MSC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"users\":[\n\t\t1\n\t\t],\n\t\t\"details\":{\n    \"member_since\":\"07/02/2019\"\n}\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/certificate/generate?type=MSC",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"generate"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "MSC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CERTIFICATE GENERATION FOR COC CRP",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"users\":[\n\t\t1,3\n\t\t],\n\t\t\"details\":{\n\t\t\t\"date_of_generation\":\"07/02/2019\"\n}\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/certificate/generate?type=CRP",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"generate"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "CRP"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CERTIFICATE GENERATION FOR MLOA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZGlzYXBzOEBnbWFpbC5jb20iLCJleHAiOjE1NjUwODQ1OTZ9.K30irIAdyU8IM-MbvIvluy1xHczynQPA7ChcY2cW7OZYrQdQhDzornr4RjRrRuYB5FF35EP7xLzUDURU1juQpA"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"users\":[\n    38\n    ],\n    \"details\":{\n    \n    \"program\":\"mentorship in corporate readiness program\"\n}\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/certificate/generate?type=MLOA",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"generate"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "MLOA"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GENERATE FROM CSV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "AdminBearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZGlzYXBzOEBnbWFpbC5jb20iLCJleHAiOjE1NjU3MDQxMTh9.YQ0HBRJSinloChwI7zSjcsT2b58LWMe8hpRGm4ZY-pwRt58QabbiDBuXjNxxe5xf1lU8sYC4NtAXFOgwlJjQBQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"user\": {\r\n      \"email\": \"muskan.hussz@gmail.com\",\r\n      \"name\": \"Muskan Hussain\"\r\n    },\r\n     \"start_date\": \"05/01/2019\",\r\n     \"end_date\": \"07/28/2019\",\r\n     \"date_of_generation\": \"07/28/2019\"\r\n  }\r\n]"
+						},
+						"url": {
+							"raw": "{{base_url}}/certificate/generate/fromcsv?type=COC",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"generate",
+								"fromcsv"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "COC"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DOWNLOAD CERTIFICATES",
+			"item": [
+				{
+					"name": "DOWNLOAD CERTIFICATES BY TYPE",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/certificate/download?filename=COC",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"download"
+							],
+							"query": [
+								{
+									"key": "filename",
+									"value": "COC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DOWNLOAD CERTIFICATES BY JOB ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/certificate/download/24",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"download",
+								"24"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CERTIFICATE TEMPLATES",
+			"item": [
+				{
+					"name": "GET ALL CERTIFICATE TEMPLATES",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/template/certificate/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"template",
+								"certificate",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET  CERTIFICATE TEMPLATE BY ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/template/certificate/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"template",
+								"certificate",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE NEW CERTIFICATE TEMPLATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"TEST\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/template/certificate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"template",
+								"certificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE CERTIFICATE TEMPLATE BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"TEST1\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}template/certificate/8",
+							"host": [
+								"{{base_url}}template"
+							],
+							"path": [
+								"certificate",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE CERTIFICATE TEMPLATE BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/template/certificate/8",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"template",
+								"certificate",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EMAIL TEMPLATES",
+			"item": [
+				{
+					"name": "GET ALL EMAIL TEMPLATES",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/template/email/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"template",
+								"email",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET  EMAIL TEMPLATE BY ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/template/email/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"template",
+								"email",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE NEW EMAIL TEMPLATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"templateName\": \"Generic Mail 2\",\n        \"templateSubject\": null,\n        \"templateBody\": null,\n        \"sendFrom\": null,\n        \"cc\": null,\n        \"bcc\": null\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/template/email",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"template",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE EMAIL TEMPLATE BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"templateName\": \"Generic Mail 32\",\n        \"templateSubject\": null,\n        \"templateBody\": null,\n        \"sendFrom\": null,\n        \"cc\": \"Cc\",\n        \"bcc\": \"BCC\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/template/email/11",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"template",
+								"email",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE EMAIL TEMPLATE BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/template/email/11",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"template",
+								"email",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CERTIFICATE EMAIL TEMPLATES",
+			"item": [
+				{
+					"name": "MAP EMAIL TEMPLATE TO CERTIFICATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email_template_id",
+									"value": "9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/certificate/7/emailtemplate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"7",
+								"emailtemplate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE EMAIL TEMPLATE REFERENCE TO CERTIFICATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email_template_id",
+									"value": "9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/certificate/7/emailtemplate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"7",
+								"emailtemplate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "GET ALL USERS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/user/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET USER BY ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/user/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE NEW USER",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZGlzYXBzOEBnbWFpbC5jb20iLCJleHAiOjE1NjY2NTcyOTZ9.T4qy1gi0EABMqlLnQ6cAOV8EiC1UQb80VA0s_uCpJqy7JZnqSJgUIpso-A4tmua6V4bSMydYjCl84Xzc58GoDQ"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"name\": \"1\",\n    \"email\": \"abc63@gmail.com\",\n     \"gender\":\"\",\n     \"mobile\":\"\"\n     \n   \n  },\n  {\n  \t \"name\": \"1\",\n    \"email\": \"abc7211@gmail.com\"\n   \n  }\n]"
+						},
+						"url": {
+							"raw": "{{base_url}}/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE USER BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Karanjot Singh Bawa\",\n    \"email\": \"karanjotsinghbawa@gmail.com\",\n    \"gender\": \"Male\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/user/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE USER BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/user/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET CERTIFICATES",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZGlzYXBzOEBnbWFpbC5jb20iLCJleHAiOjE1NjY4MDAyOTN9.22UNn9m-N9l0UCxNphne92dJNeTRskfaKGfWjKdvoi5FhtDBkhlr0uOBIOGIdoxHXtq-V0WlBYfy7kohKKGl5g"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/user/certificates/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"certificates",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET EMAILS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZGlzYXBzOEBnbWFpbC5jb20iLCJleHAiOjE1NjY4MDAyOTN9.22UNn9m-N9l0UCxNphne92dJNeTRskfaKGfWjKdvoi5FhtDBkhlr0uOBIOGIdoxHXtq-V0WlBYfy7kohKKGl5g"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/user/emails/37",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"emails",
+								"37"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TAGS",
+			"item": [
+				{
+					"name": "GET ALL TAGS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tags/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tags",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET TAG BY ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tags/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tags",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE NEW TAG",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"name\": \"tag987\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/tags",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE TAG BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Tag\"}"
+						},
+						"url": {
+							"raw": "{{base_url}}/tags/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tags",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE TAG BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/tags/11",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tags",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER TAGS",
+			"item": [
+				{
+					"name": "GET ALL TAGS OF A USER BY USER ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/user/2/tags/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"2",
+								"tags",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE NEW ASSOCIATION OF TAG WITH USER",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/user/3/tags?tag_name=taG7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"3",
+								"tags"
+							],
+							"query": [
+								{
+									"key": "tag_name",
+									"value": "taG7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ASSOCIATION OF TAG WITH USER BY TAG ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/user/3/tags?tag_id=5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"3",
+								"tags"
+							],
+							"query": [
+								{
+									"key": "tag_id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL USERS BELONGING TO A TAG BY TAG ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tags/8/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tags",
+								"8",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL USERS BELONGING TO A TAG BY TAG NAME",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tags/users?tag_name=tAg7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tags",
+								"users"
+							],
+							"query": [
+								{
+									"key": "tag_name",
+									"value": "tAg7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE NEW ASSOCIATION OF TAGS WITH MULTIPLE USERS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZGlzYXBzOEBnbWFpbC5jb20iLCJleHAiOjE1NjcxNTI4MTh9.nyMGUaIK07qGiNJxbUblUklkJrGKXz9STvN7ORp5muGHBhGSkCOL1DywDArRmmz2qaJImokulIilFk6Izkj6og"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[49,50,51,52,53,54]"
+						},
+						"url": {
+							"raw": "{{base_url}}/user/tags?tag_name=new14",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"tags"
+							],
+							"query": [
+								{
+									"key": "tag_name",
+									"value": "new14"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SENDING EMAILS",
+			"item": [
+				{
+					"name": "SEND EMAIL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "AdminBearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZGlzYXBzOEBnbWFpbC5jb20iLCJleHAiOjE1NzMzOTk2NDh9.ZGDbqZ3xW0uYy6zoGzpm3CqsTfXShLbsCUb-9GI-cDITQ-vZiVkk7maTPQt23xVZQZBOauKs-bxIpexjkfRokQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n\t\"subject\": \"SOMESUBJECT\",\n\t\"body\":\"<h1>{name} ${keyword2}</h1>\",\n    \"listOfRecepients\":[\n\t\t{\n\t\t\t\"recepientEmail\" : \"beingkaran21@gmail.com\",\n\t\t\t\"keywords\":{\n    \t\t\"$keyword1\": \"Karan\",\n    \t\t\"$keyword2\": \"123\"\n            }\n    \n\t\t}\n    ]\n\t\t}\n"
+						},
+						"url": {
+							"raw": "{{base_url}}/sendemail",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sendemail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEND CERTIFICATE SUMMARY EMAIL TO ADMIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/sendemail/certificatesummary?action=generated",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sendemail",
+								"certificatesummary"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "generated"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEND EMAIL SUMMARY TO ADMIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/sendemail/emailsummary",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sendemail",
+								"emailsummary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL CERTIFICATES BY JOB ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/certificate/all/11",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"all",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RELEASE CERTIFICATES",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer {{admin_bearer_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[109,110]"
+						},
+						"url": {
+							"raw": "{{base_url}}/certificate/release",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate",
+								"release"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEND CERTIFICATE SUMMARY EMAIL BY JOBID TO ADMIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AdminBearer "
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/sendemail/certificatesummary/76?action=released",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sendemail",
+								"certificatesummary",
+								"76"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "released"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET USEREMAIL JOBS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AdminBearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZGlzYXBzOEBnbWFpbC5jb20iLCJleHAiOjE1Njc5NjczNDd9.hbqPbTwnDg2ByyYdrCFnDe6izhifNOGw0bFp3sayTUsNBJLpIdz2f7RzcEYm1QzdMFbMjaYOK45ps5gbsQB-GA"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/useremail/jobs",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"useremail",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
